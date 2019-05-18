@@ -1,0 +1,186 @@
+﻿@model PCVTry.Models.VmsRolegroup
+@{
+    ViewData["Title"] = "VmsRolegroupsCreate";
+    Layout = "_Layout";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #1B295B;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 15px;
+                color: #f1f1f1;
+                display: block;
+                transition: 0.3s;
+            }
+
+                .sidenav a:hover {
+                    color: #818181;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 25px;
+                margin-left: 50px;
+            }
+
+        media screen and (max-height: 450px) {
+            .sidenav
+
+
+
+        {
+            padding-top: 10px;
+        }
+
+        .sidenav a {
+            font-size: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/User/RequestInfoesCreate">Create</a>
+        <a href="/User/UserInformation">User Information</a>
+        <a href="/User/UserRequirementsCreate">Requirements</a>
+        <a href="/User/VmsRoleGroupsCreate">Application Access VMS Role/Group</a>
+        <a href="/User/OtsAccessCreate">Application Access OTS Access</a>
+        <a href="/User/BpoRoleGroupsCreate">Application Access BPO Role/Group</a>
+        <a href="/User/LrvRoleGroupsCreate">Application Access LRV Role/Group</a>
+        <a href="/User/ReviewerInfo">Reviewer Information</a>
+    </div>
+
+
+
+
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }</script> <br>
+
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/User/RequestInfoesCreate">Create</a>
+        <a href="/User/UserInformation">User Information</a>
+        <a href="/User/UserRequirementsCreate">Requirements</a>
+        <a href="/User/VmsRoleGroupsCreate">Application Access VMS Role/Group</a>
+        <a href="/User/OtsAccessCreate">Application Access OTS Access</a>
+        <a href="/User/BpoRoleGroupsCreate">Application Access BPO Role/Group</a>
+        <a href="/User/LrvRoleGroupsCreate">Application Access LRV Role/Group</a>
+        <a href="/User/ReviewerInfo">Reviewer Information</a>
+    </div>
+    <br />
+    <br />
+    <h2 class="text-center bg-primary">Vms Rolegroup</h2>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="VmsRolegroupsCreate">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="VmsroleGroupId" class="control-label"></label>
+                    <input asp-for="VmsroleGroupId" class="form-control" />
+                    <span asp-validation-for="VmsroleGroupId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AccountGroup" class="control-label"></label>
+                    @Html.EditorFor(x => x.AccountGroup)
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminSupport" class="control-label"></label>
+                    @Html.EditorFor(x => x.AdminSupport)
+                </div>
+                <div class="form-group">
+                    <label asp-for="Assignor" class="control-label"></label>
+                    @Html.EditorFor(x => x.Assignor)
+                </div>
+                <div class="form-group">
+                    <label asp-for="Auditor" class="control-label"></label>
+                    @Html.EditorFor(x => x.Auditor)
+                </div>
+                <div class="form-group">
+                    <label asp-for="CliServiDeptMgr" class="control-label"></label>
+                    @Html.EditorFor(x => x.CliServiDeptMgr)
+                </div>
+                <div class="form-group">
+                    <label asp-for="CliServiGroup" class="control-label"></label>
+                    @Html.EditorFor(x => x.CliServiGroup)
+                </div>
+                <div class="form-group">
+                    <label asp-for="CommercialGroup" class="control-label"></label>
+                    @Html.EditorFor(x => x.CommercialGroup)
+                </div>
+                <div class="form-group">
+                    <label asp-for="ContractorQc" class="control-label"></label>
+                    @Html.EditorFor(x => x.ContractorQc)
+                </div>
+                <div class="form-group">
+                    <label asp-for="Itgroup" class="control-label"></label>
+                    @Html.EditorFor(x => x.Itgroup)
+                </div>
+                <div class="form-group">
+                    <label asp-for="ProcessingShippingGroup" class="control-label"></label>
+                    @Html.EditorFor(x => x.ProcessingShippingGroup)
+                </div>
+                <div class="form-group">
+                    <label asp-for="QcsupervisorLead" class="control-label"></label>
+                    @Html.EditorFor(x => x.QcsupervisorLead)
+                </div>
+                <div class="form-group">
+                    <label asp-for="Qc" class="control-label"></label>
+                    @Html.EditorFor(x => x.ContractorQc)
+                </div>
+                <div class="form-group">
+                    <label asp-for="SalesGroup" class="control-label"></label>
+                    @Html.EditorFor(x => x.SalesGroup)
+                </div>
+                <div class="form-group">
+                    <label asp-for="StatusGroup" class="control-label"></label>
+                    @Html.EditorFor(x => x.StatusGroup)
+                </div>
+                <div class="form-group">
+                    <label asp-for="VendorRelationsGroup" class="control-label"></label>
+                    @Html.EditorFor(x => x.VendorRelationsGroup)
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Next" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

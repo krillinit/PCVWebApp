@@ -1,0 +1,136 @@
+﻿@model PCVTry.Models.Requestinfo
+@{
+    ViewData["Title"] = "RequestInfoesCreate";
+    Layout = "_Layout";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #1B295B;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 15px;
+                color: #f1f1f1;
+                display: block;
+                transition: 0.3s;
+            }
+
+                .sidenav a:hover {
+                    color: #818181;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 25px;
+                margin-left: 50px;
+            }
+
+        media screen and (max-height: 450px) {
+            .sidenav
+
+
+
+        {
+            padding-top: 10px;
+        }
+
+        .sidenav a {
+            font-size: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/User/RequestInfoesCreate">Create</a>
+        <a href="/User/UserInformation">User Information</a>
+        <a href="/User/UserRequirementsCreate">Requirements</a>
+        <a href="/User/VmsRoleGroupsCreate">Application Access VMS Role/Group</a>
+        <a href="/User/OtsAccessCreate">Application Access OTS Access</a>
+        <a href="/User/BpoRoleGroupsCreate">Application Access BPO Role/Group</a>
+        <a href="/User/LrvRoleGroupsCreate">Application Access LRV Role/Group</a>
+        <a href="/User/ReviewerInfo">Reviewer Information</a>
+    </div>
+
+
+
+
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }</script> <br>
+    <br />
+    <br />
+    <h2 class="text-center bg-primary">Request Info</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="RequestInfoesCreate">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="TodayDate" class="control-label"></label>
+                    <input asp-for="TodayDate" class="form-control" />
+                    <span asp-validation-for="TodayDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RequestType" class="control-label"></label>
+                    <input asp-for="RequestType" class="form-control" />
+                    <span asp-validation-for="RequestType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RequestByName" class="control-label"></label>
+                    <input asp-for="RequestByName" class="form-control" />
+                    <span asp-validation-for="RequestByName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EffectiveStart" class="control-label"></label>
+                    <input asp-for="EffectiveStart" class="form-control" />
+                    <span asp-validation-for="EffectiveStart" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EffectiveEnd" class="control-label"></label>
+                    <input asp-for="EffectiveEnd" class="form-control" />
+                    <span asp-validation-for="EffectiveEnd" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RequestId" class="control-label"></label>
+                    <input asp-for="RequestId" class="form-control" />
+                    <span asp-validation-for="RequestId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Next" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

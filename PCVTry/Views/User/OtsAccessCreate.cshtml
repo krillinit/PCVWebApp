@@ -1,0 +1,66 @@
+﻿@model PCVTry.Models.OtsAccess
+@{
+    ViewData["Title"] = "OtsAccessCreate";
+}
+<br />
+<br />
+<h2 class="text-center bg-primary">Ots Access</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="OtsAccessCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OtsAccessId" class="control-label"></label>
+                <input asp-for="OtsAccessId" class="form-control" />
+                <span asp-validation-for="OtsAccessId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Return" class="control-label"></label>
+                @Html.EditorFor(x => x.Return)
+            </div>
+            <div class="form-group">
+                <label asp-for="MultiAssign" class="control-label"></label>
+                @Html.EditorFor(x => x.MultiAssign)
+            </div>
+            <div class="form-group">
+                <label asp-for="DeleteOrder" class="control-label"></label>
+                @Html.EditorFor(x => x.DeleteOrder)
+            </div>
+            <div class="form-group">
+                <label asp-for="ToReassign" class="control-label"></label>
+                @Html.EditorFor(x => x.ToReassign)
+            </div>
+            <div class="form-group">
+                <label asp-for="RecreateOrder" class="control-label"></label>
+                @Html.EditorFor(x => x.RecreateOrder)
+            </div>
+            <div class="form-group">
+                <label asp-for="AppraisalTagShip" class="control-label"></label>
+                @Html.EditorFor(x => x.AppraisalTagShip)
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintainTagReasons" class="control-label"></label>
+                @Html.EditorFor(x => x.MaintainTagReasons)
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintainClariReasons" class="control-label"></label>
+                @Html.EditorFor(x => x.MaintainClariReasons)
+            </div>
+            <div class="form-group">
+                <label asp-for="AuditAdmin" class="control-label"></label>
+                @Html.EditorFor(x => x.AuditAdmin)
+            </div>
+            <div class="form-group">
+                <label asp-for="DisputeQueueAccess" class="control-label"></label>
+                @Html.EditorFor(x => x.DisputeQueueAccess)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Next" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

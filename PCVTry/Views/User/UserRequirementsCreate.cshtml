@@ -1,0 +1,176 @@
+﻿@model PCVTry.Models.UserRequirements
+
+@{
+    ViewData["Title"] = "UserRequirementsCreate";
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #1B295B;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 15px;
+                color: #f1f1f1;
+                display: block;
+                transition: 0.3s;
+            }
+
+                .sidenav a:hover {
+                    color: #818181;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 25px;
+                margin-left: 50px;
+            }
+
+        media screen and (max-height: 450px) {
+            .sidenav
+
+
+
+        {
+            padding-top: 10px;
+        }
+
+        .sidenav a {
+            font-size: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/User/RequestInfoesCreate">Create</a>
+        <a href="/User/UserTablesCreate">User Information</a>
+        <a href="/User/UserRequirementsCreate">Requirements</a>
+        <a href="/User/VmsRoleGroupsCreate">Application Access VMS Role/Group</a>
+        <a href="/User/OtsAccessCreate">Application Access OTS Access</a>
+        <a href="/User/BpoRoleGroupsCreate">Application Access BPO Role/Group</a>
+        <a href="/User/LrvRoleGroupsCreate">Application Access LRV Role/Group</a>
+        <a href="/User/ReviewerInfo">Reviewer Information</a>
+    </div>
+
+
+
+
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }</script> <br>
+    <br />
+    <br />
+    <h2 class="text-center bg-primary">User Requirements</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <br />
+                <br />
+
+                <div class="card card-signin my-5 bg-dark">
+                    <div class="card-body">
+                        <h2 class="card-title text-center bg-primary">User Requirements</h2>
+                        <form class="form-signin" asp-action="UserRequirementsCreate">
+                            <div asp-validation-summary="ModelOnly" class="alert alert-primary"></div>
+                            <div class="form-group">
+                                <label asp-for="UserReqId" class="control-label">User Id</label>
+                                <input asp-for="UserReqId" class="form-control" />
+                                <span asp-validation-for="UserReqId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="FloorNum" class="control-label">Floor Num</label>
+                                <input asp-for="FloorNum" class="form-control" />
+                                <span asp-validation-for="FloorNum" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CubeNum" class="control-label"></label>
+                                <input asp-for="CubeNum" class="form-control" />
+                                <span asp-validation-for="CubeNum" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DidNum" class="control-label"></label>
+                                <input asp-for="DidNum" class="form-control" />
+                                <span asp-validation-for="DidNum" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DualMon" class="control-label"></label>
+                                <input asp-for="DualMon" class="form-control" />
+                                <span asp-validation-for="DualMon" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="RemoAcc" class="control-label"></label>
+                                <input asp-for="RemoAcc" class="form-control" />
+                                <span asp-validation-for="RemoAcc" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="RemoLap" class="control-label"></label>
+                                <input asp-for="RemoLap" class="form-control" />
+                                <span asp-validation-for="RemoLap" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Mobile" class="control-label"></label>
+                                <input asp-for="Mobile" class="form-control" />
+                                <span asp-validation-for="Mobile" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="UserStatus" class="control-label"></label>
+                                <input asp-for="UserStatus" class="form-control" />
+                                <span asp-validation-for="UserStatus" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="UserName" class="control-label"></label>
+                                <input asp-for="UserName" class="form-control" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <hr class="my-4">
+                            <div class="form-group">
+                                <input type="submit" value="Next" class="btn btn-dark" />
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
