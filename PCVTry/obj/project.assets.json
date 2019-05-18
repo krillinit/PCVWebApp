@@ -12671,11 +12671,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lil-v\\Desktop\\CoreWebApp-NewerBranch\\PCVTry\\PCVTry.csproj",
+      "projectUniqueName": "C:\\Users\\lil-v\\Documents\\GitHub\\PVCWebApp\\PCVTry\\PCVTry.csproj",
       "projectName": "PCVTry",
-      "projectPath": "C:\\Users\\lil-v\\Desktop\\CoreWebApp-NewerBranch\\PCVTry\\PCVTry.csproj",
+      "projectPath": "C:\\Users\\lil-v\\Documents\\GitHub\\PVCWebApp\\PCVTry\\PCVTry.csproj",
       "packagesPath": "C:\\Users\\lil-v\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lil-v\\Desktop\\CoreWebApp-NewerBranch\\PCVTry\\obj\\",
+      "outputPath": "C:\\Users\\lil-v\\Documents\\GitHub\\PVCWebApp\\PCVTry\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
